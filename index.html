@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>madefrfr</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nanum+Pen+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- MAIN CONTAINER (TOP-DOWN WOODEN DESK) -->
+    <main id="app-container">
+
+        <!-- DECORATION 1: COFFEE CUP -->
+        <div class="decor-coffee" aria-hidden="true">
+            <div class="plate"></div>
+            <div class="coffee-cup">
+                <div class="coffee-liquid">
+                    <div class="latte-art"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DECORATION 2: PENCIL CASE & STATIONERY -->
+        <div class="decor-pencil-case" aria-hidden="true">
+            <div class="pencil-case-body">
+                <div class="pencil p1"></div>
+                <div class="pencil p2"></div>
+                <div class="pencil p3"></div>
+            </div>
+        </div>
+
+        <!-- DECORATION 3: DRIED LEAVES -->
+        <div class="decor-leaf" aria-hidden="true">
+            <div class="leaf-stem"></div>
+            <div class="leaf-item l1"></div>
+            <div class="leaf-item l2"></div>
+        </div>
+
+        <!-- DECORATION 4: STICKY NOTE & PAPERCLIP -->
+        <div class="decor-sticky-note" aria-hidden="true">
+            <div class="paperclip"></div>
+            <div class="note-paper">
+                <p>hi there!</p>
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- 1. LANDING PAGE / SCRAPBOOK COVER          -->
+        <!-- ========================================== -->
+        <section id="cover-section">
+            <!-- Replacing old edge tapes with inner cute tags -->
+            <div class="cover-tag tag-top">pompom's?</div>
+
+            <div class="ribbon-icon">
+                <div class="wax-seal">♡</div>
+            </div>
+            <p class="subtitle">So, this is</p>
+            <h1>Maddy's masterpieces</h1>
+            <p class="description">Made as a sign of gratitude, appreciation, and admiration to you. This is basically a scrapbook but take a look of your "gallery"!</p>
+            
+            <button type="button" id="btn-start" onclick="openScrapbook()">Open me up, bubs! ദ്ദി◝ ⩊ ◜.ᐟ</button>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 2. SCRAPBOOK PAGES WRAPPER                 -->
+        <!-- ========================================== -->
+        <div id="scrapbook-wrapper" class="hidden">
+
+            <!-- ======================================================== -->
+            <!-- PAGE 1 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)               -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd active" id="page-1">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Table of Contents</h3>
+                        <p class="memo-text">No spoilers pls ............. 01</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">So..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 1 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Story 📖</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 1</p>
+                            <div class="popup-custom-body">
+                                <p class="popup-greeting"><strong>Random Riddle posing..?</strong></p>
+                                <p>I think he was like "Oh shit, I'm being sketched." Anyways, back to April 4th, early days, isn't it? We haven't got together yet, but MAN I was crazily surprised when you decided to gift me this piece. At this time, I was like "Kenapa dia tiba-tiba gift aku gambar Riddle.. BUAT AKU?? Damnn, respect Maddy" (I think I was still being bitchy to act hard to get at that time LMAO I hope you don't really uh ya gitu pokoknya WKKWKWK)
+                                    "deadass had like 2 hours till church starts and I was like ykw imma draw that red twink" "IDK I WANTED TO GIFT SOMETHING FOR U AFTER BEING SO NICE" Those two sentences of you, I think made me fluttered HAHA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/0404.jpeg" alt="Memory Photo 1" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Perhaps the first one”</h4>
+                            <p class="photo-story">
+                                It is a surprise at that time.
+                            </p>
+                            <p class="photo-footer-text">Thank you for the Riddle drawing even when you were in church and perhaps bored YAHA!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(0)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(2)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 2 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-2">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">so NERDYYY</h3>
+                        <p class="memo-text">Secret note inside ............. 02</p>
+                        <p class="memo-desc">
+                           Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long. 
+                        </p>
+                        <p class="memo-so">Hi honestly im just typing shi here yes</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 2 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Unique Perspective</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 2</p>
+                            <div class="popup-custom-body">
+                                <p class="popup-greeting"><strong>Fun fact about that sunny day:</strong></p>
+                                    <p>Itu UNIK banget. Interesting perspective terus kek kesannya Riddle ini tengil and nakal bgt walau pake kacamata. My fav artist really butchered this one perfectly. I LOVE IT BROWUUWUWWUWEUEU</p>
+                                    <p>So, kalo ga salah, ini sempet aku jadiin foto profil Instagram. I really love your arts in general. When you feel down, come over to this digital gallery of yours. And I think worth mentioning that not only me who love your arts as a whole, but I'm sure somebody else out there DEFINITELY love your creations. So, pls don't retire so soon, My Favorite Artist.</p>
+                                    <p>"ts is in return for easy math quiz" makasih banyak bub</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/0804.jpeg" alt="Memory Photo 2" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Nerd Riddle”</h4>
+                            <p class="photo-story">
+                                I'm sorry, I think I was being too Riddleholic at that time so you find yourself drawing this red twink more than once yayapapam.
+                            </p>
+                            <p class="photo-footer-text">LOVE THE GLASSES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(1)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(3)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 3 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)               -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-3">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">HELLO AGAIN</h3>
+                        <p class="memo-text">I think I would rank this up high in the aspect of cuteness.</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">eheheheh</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 3 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Silly ahh Heizou artpiece</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 3</p>
+                            <div class="popup-custom-body">
+                                <p>You know when I saw this piece when you sent it to me, aku rasanya mau peluk gitu. Just look at how innocent and goofy looking he is in the frame like.. yah.. Forget talking about what's in the drawing, HOW DO YOU EVEN DO ALL THIS..??? I am too amazed to the point I found myself staring deep to the tiniest detail possible in this one. Oh, for the record, 2 artpieces ahead, are both sent at the same date; April 19. Four days after we got together YAHAHAHA! "I made it bc you had a long day so I thought oh maybe a lil present would be nice" so sweet of you, my love</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1904b.jpeg" alt="Memory Photo 3" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Hello”</h4>
+                            <p class="photo-story">
+                                This is too cute..
+                            </p>
+                            <p class="photo-footer-text">Hi, thank you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(2)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(4)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 4 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-4">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Sweetlings</h3>
+                        <p class="memo-text">Gemes</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Ucuw</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 4 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Riddle and Kohane ueueue</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 4</p>
+                            <div class="popup-custom-body">
+                                <p>This one is taken from the Canva you sent me one. I still have it. Reading it again feels like.. ethereal. I never felt THAT way before. I really love the Canva you sent me with the letters. I really appreciate and I really love that letter on my soul.</p>
+                                <p>Even though, later as we keep moving together time by time, I'm sure our paths arent going to be smooth. But, I really hope we won't become a stranger, even when being together and keeping commitments is hard and boring at times. I love you. (OOT but I really love Riddle and MY CHILD KOHANE IN THIS DRAWING LIKE OMG IM DYING ITU KOHANE LUCU BANGET)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1904.jpeg" alt="Memory Photo 4" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“First Crossfandom Art?”</h4>
+                            <p class="photo-story">
+                                THIS IS HELLA CUTE THO
+                            </p>
+                            <p class="photo-footer-text">I want to hug them bro (and you of course)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(3)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(5)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 5 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)               -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-5">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Give Me a Reason</h3>
+                        <p class="memo-text">5th page and we seeing seals.. IN HEIZOU'S ARMS?!</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Peek here..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 5 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">GATAU GEMBROT GEMBROT SEMUA INI KIYOWO</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 5</p>
+                            <div class="popup-custom-body">
+                                <p>I honestly don't know what to say. This is simply TOO CUTE. If I have my own room, I'd put this drawing on my wall bro. Thank you for this cute piece. (HEIZOU SAMA SEALNYA MAU GW CUBIT PLS kenapa your creation lucu-lucu semua omg)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/2404.jpeg" alt="Memory Photo 5" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“FATTY WITH MY DETECTIVE”</h4>
+                            <p class="photo-story">
+                                Guys, kenapa dia punya 2 ekor seals..?
+                            </p>
+                            <p class="photo-footer-text">gembrottt semuanya</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(4)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(6)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 6 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-6">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Most "bling bling" one ⭐</h3>
+                        <p class="memo-text">May 1st, but she dropped a starstrucking drawing</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Fun fact?</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 6 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Looking good..</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 6</p>
+                            <div class="popup-custom-body">
+                                <p>THIS ONE IS RICH IN COLOR. He seems like a Disney prince in that drawing. I wonder how long did you draw this piece, like look at the details.. those are fascinating. Gold accessories, apple on the hand, bush of roses as the background. It's giving an elegant photoshoot ykwim. I love it, really.</p>
+                                <p>Fun fact: Occasionally I look at the gifts you gave me. Because I don't want those valuable creations forgotten. Like, you know, people usually look once and forget. But, not for me, ESPECIALLY the gifts and hey, those are from you!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/0105.jpeg" alt="Memory Photo 6" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Riddle's Throne”</h4>
+                            <p class="photo-story">
+                                Throne, apple, gold, and roses.
+                            </p>
+                            <p class="photo-footer-text">Glamorous</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(5)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(7)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 7 (ODD: BINDER KIRI, LEMBAR BUKU KANAN - LANDSCAPE VIDEO) -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-7">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">No Words</h3>
+                        <p class="memo-text">From my heart ............. </p>
+                        <p class="memo-desc">
+                            My heart could feel what my lips can't tell. Please click the button below because if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">I don't know for this one..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 7 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Amazing.</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 7</p>
+                            <div class="popup-custom-body">
+                                <p>This video sent to me at May 15th. Our 1 monthversary dan ini straight up banger. Gila cher, aku bener-bener suka banget sama video ini. This video depicts us so good bru. The first time I played the video, I was like I want to cry but cannot karena terlalu seneng of how good the video is. Even if it's only 47 seconds. Kalo ditonton lagi maybe agak janggal, but I STILL IN KIND OF DISBELIEF ada orang yang buat kyk gitu.</p>
+                                <p>I am really proud of you despite all matters. Your efforts are always EXTRAORDINARY. You work hard to create something for me, and I appreciate it so much. I love you!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black video-frame">
+                            <video controls playsinline preload="metadata">
+                                <source src="assets/images/1505.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“A Dream Depicted in a Video”</h4>
+                            <p class="photo-story">
+                                1 monthversary goes.. dreamy.
+                            </p>
+                            <p class="photo-footer-text">The most unexpected one yet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(6)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(8)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 8 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-8">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Animal Personas</h3>
+                        <p class="memo-text">Kenapa mereka gemesin gitu</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">One more bite.. of their cheeks..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 8 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Seal & Bunny</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 8</p>
+                            <div class="popup-custom-body">
+                                <p>Well, it's pretty obvious about this one. YAHAHAHA! So this one was 1 of 2 gifts in June 15th. I still apasih namanya.. Ga nyangka kamu bakal buat selucu itu in your style. I LIKE IT. Mana sampe dibuat jadi stiker segala lagi WKWKKWKWK</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1606.jpeg" alt="Memory Photo 8" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Seal & Bunny”</h4>
+                            <p class="photo-story">
+                                Us in our animal persona.
+                            </p>
+                            <p class="photo-footer-text">KIYOWO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(7)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(9)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 9 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)               -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-9">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Love 'em</h3>
+                        <p class="memo-text">Look at how cute they are</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Golden times..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 9 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Knight's leader and a detective</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 9</p>
+                            <div class="popup-custom-body">
+                                <p>I don't know.. THIS IS JUST SEEMS FUNNY AND CUTE BRO.. My twinklings.. gw kek mau tabok mereka satu persatu apalagi di artstyle kamu. I'LL KISS THE ARTIST. Oh, and this is 2 of 2 gift in June 15th. Thank you..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1506.jpeg" alt="Memory Photo 9" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“HeizouLohen”</h4>
+                            <p class="photo-story">
+                                Our fictional lover from genshin bonding.
+                            </p>
+                            <p class="photo-footer-text">Vice-captain of the knights and detective</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(8)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(10)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 10 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-10">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Sua and Mizi but it's us</h3>
+                        <p class="memo-text">How do you even do the style..</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">I love the styles you put</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 10 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Us if VIVINOS is the creator</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 10</p>
+                            <div class="popup-custom-body">
+                                <p>I actually pretty taken aback when you show this one. Karena let's be honest, ini mirip sama art Mizi and Sua yang itu tuh. Terus I kinda love my big ahh eyes like I'm taking Sua's place in the frame. It's so cute. Terus mata kamu kek dilated sumpah lucu banget I love this to the point it's still my phone's home wallpaper until now. Oh yeah, this was for celebrating our 3rd monthversary kalo ga salah.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1507.jpeg" alt="Memory Photo 10" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“ALST Personalization”</h4>
+                            <p class="photo-story">
+                                Us depicted in ALST style.
+                            </p>
+                            <p class="photo-footer-text">I wonder who died in what stage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(9)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(11)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 11 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-11">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">1/3</h3>
+                        <p class="memo-text">August 15th</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Yaha!</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 11 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Seal and Bunnehhh</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 11</p>
+                            <div class="popup-custom-body">
+                                <p>This is also my dream.. like I WANT TO WEAR ONESIES YAHAAAA and you drew us in onesies and do you notice the height difference? IT'S SO CUTE BRO just look at it. I don't even know what to say anymore because I had a CUTENESS OVERLOAD</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1508a.jpeg" alt="Memory Photo 11" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Onesies”</h4>
+                            <p class="photo-story">
+                                Lucu guys, onesies masing-masing representative animal..
+                            </p>
+                            <p class="photo-footer-text">"ough"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(10)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(12)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 12 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-12">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">2/3</h3>
+                        <p class="memo-text">August 15th</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Imut</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 12 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Piggyback Ride - Yahoo</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 12</p>
+                            <div class="popup-custom-body">
+                                <p>I don't know if I am capable enough to carry you like that irl BAHAHHAHA but it's really funny looking bro, ini basically Ivan if he's black SUMPAH LUCU.. And you having a heart shape in your throat? I DIDN'T EXPECT THAT BUT I WAS LIKE "oh interesting detail, maybe she's screaming guys" 😭😭</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1508b.jpeg" alt="Memory Photo 12" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Piggyback”</h4>
+                            <p class="photo-story">
+                                I want to carry you like this someday, I wish I can tho LOL
+                            </p>
+                            <p class="photo-footer-text">Cutelingss</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(11)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(13)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 13 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-13">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">3/3</h3>
+                        <p class="memo-text">August 15th</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Pitter-patter..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 13 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Whisper to Me, Please</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 13</p>
+                            <div class="popup-custom-body">
+                                <p>JOKES ASIDEEEE I WANT TO MENTION THE CLOTHES IN THIS PIECE. WHO DESIGNED OUR OUTFIT?! I love them so much. Your dress look really wonderful, like.. man, I love white dresses. And the way you make my outfit looks like a robe (?) MAN it's so cool, no joke. It makes me want to buy that outfit and wear it as pajamas because it just looks so comfy you knowwuhh.</p>
+                                <p>WOI ekspresi wajah mereka lucu banget PLSSSS kek innocent banget.. How do you not melt as you drawing those..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1508c.jpeg" alt="Memory Photo 13" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Whispering”</h4>
+                            <p class="photo-story">
+                                Tampar-able faces
+                            </p>
+                            <p class="photo-footer-text">love their expression</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(12)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(14)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 14 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-14">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Shenanigans smh</h3>
+                        <p class="memo-text">Date of Birth: August 30th</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Maddy brought them out from Rintama to her canvas</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 14 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">When we create them and you draw them out</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 14</p>
+                            <div class="popup-custom-body">
+                                <p>Lucu banget yang satu desainnya colorful, satunya lagi hitam putih. Perhaps this is the most serious thing I've ever attempted about OCs. I really love them. How about you? Hehe.. The OCs are our idea, but the artwork is yours. I'M SO GRATEFUL that you drew them for me. I love you. I lowkey want to learn how to draw them and find my artstyle, but I don't know guys... I want to inhale and eat your artworks.. Slurp..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/3008b.jpeg" alt="Memory Photo 14" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“The Children”</h4>
+                            <p class="photo-story">
+                                I think the children born in August 30th, LOL
+                            </p>
+                            <p class="photo-footer-text">who are these randoms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(13)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(15)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 15 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-15">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">SWEETLINGS</h3>
+                        <p class="memo-text">Hafta (Have to) look cute, don't they?</p>
+                        <p class="memo-desc">
+                            Mereka pose kek gitu biar apa sih.. (Aku iri soalnya) ANYWAYS, click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">So lovely..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 15 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">When you're cool asf</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 15</p>
+                            <div class="popup-custom-body">
+                                <p>Binar mata mereka bisa-bisa nya mencuri pandangan aku.. EAK SUKII.. Yaa.. yang ini juga dropped in August 30th, bersamaan dengan gambar awal Sophrosyne & Felix. Kalo yang disini, aku pengen highlight wajah dari Felix. Aura ekspresif dia keliatan banget, he's so you.. awhh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/3008c.jpeg" alt="Memory Photo 15" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Annoying”</h4>
+                            <p class="photo-story">
+                                Kenapa mereka kece banget gitu.. When yah..
+                            </p>
+                            <p class="photo-footer-text">camero</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(14)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(16)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 16 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-16">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">1/2</h3>
+                        <p class="memo-text">September 15th</p>
+                        <p class="memo-desc">
+                            Why are they tryna kill eachother.. Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Ok</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 16 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">G.O.A.T</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 16</p>
+                            <div class="popup-custom-body">
+                                <p>Wow, the artworks show is not even close to finish, maybe a little bit more. BAHAHAHA.. I love this one to the point it reminded me of how 'Rivalsholic' we were. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1509a.jpeg" alt="Memory Photo 16" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Rivals but it's them”</h4>
+                            <p class="photo-story">
+                                For once, they're enemy.
+                            </p>
+                            <p class="photo-footer-text">my laputopu wallpaper yahaa!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(15)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(17)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 17 (ODD: BINDER KIRI, LEMBAR BUKU KANAN)              -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-17">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Shenanigans #2</h3>
+                        <p class="memo-text">Straight up lovey dovey</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Warm embrace..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 17 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Hugs from behind</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 17</p>
+                            <div class="popup-custom-body">
+                                <p>Ini sweet banget guys.. Makes me want to hug someone like this. SIGH. Affectionatenya keliatan banget.. Again, how do you make it simple yet beautiful like this bro omg..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1509b.jpeg" alt="Memory Photo 17" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Sweet”</h4>
+                            <p class="photo-story">
+                                Aduh, kita when yah..
+                            </p>
+                            <p class="photo-footer-text">soo wonderful</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(16)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(18)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 18 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-18">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Dream #2</h3>
+                        <p class="memo-text">I wish it's gonna be real soon</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Almost there..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 18 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">Sweetest scenario</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 18</p>
+                            <div class="popup-custom-body">
+                                <p>I think I cannot describe my love to this one.. Karena my love language physical touch, I was keep thinking how bad I want to hug you that way bro. Anyways, yeah.. It's pretty obvious of how happy, cute, and wholesome they are.. [pleading face] Seeing your artworks which contains physical touches makes me want to hug or annoy someone physically asap UGHHH I'M SORREY.. I AM HIGHLY APPRECIATE YOU for making this one out of random and just because I had a bad day, omg THANK YOU!!! Overall, this particular piece is absolute mastery. ❤︎ </p>
+                                <p>Oh yeah, next page contains <strong> NSFW </strong> picture, please be aware and be careful.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/2909.jpeg" alt="Memory Photo 18" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“Photobox”</h4>
+                            <p class="photo-story">
+                                PHOTOBOX MOMENT SAY CHEESEUUU
+                            </p>
+                            <p class="photo-footer-text">FOREVER CHERISHED</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(17)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(19)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 19 (ODD: BINDER KIRI, LEMBAR BUKU KANAN - FINAL PAGE) -->
+            <!-- ======================================================== -->
+            <article class="page-item page-odd hidden" id="page-19">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">Surprise above the expectation</h3>
+                        <p class="memo-text">Dear basketball.. 🙏</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">Hi lol</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 19 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">1st NSFW, kinda nervous..</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 19</p>
+                            <div class="popup-custom-body">
+                                <p>Well.. Was it fun drawing this piece? LOL But anyways, it's cool tho.. I love it but I just look at it sometimes just outta boredom and when nobody's around because my ass will get slimed the fuck out if somebody caught me seeing this particular artwork. Despite that, I love it. I appreciate the efforts you put into this one. Too bad, this one made your perspective towards them not the same cute anymore LMAOO Well, it's okay bub, you'll get used to it. Thanks for your bravery and willingness to draw this one for the 6th monthversary!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1510nsfw.jpeg" alt="Memory Photo 19" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“First NSFW artwork between us”</h4>
+                            <p class="photo-story">
+                                It's pretty self-explanation.. 😭
+                            </p>
+                            <p class="photo-footer-text">thank you, though!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(18)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(20)">Next &gt;</button>
+                </div>
+            </article>
+
+            
+
+            <!-- ======================================================== -->
+            <!-- PAGE 20 (EVEN: LEMBAR BUKU KIRI, BINDER KANAN)             -->
+            <!-- ======================================================== -->
+            <article class="page-item page-even hidden" id="page-20">
+                <div class="page-spread">
+                    <div class="binder-notebook">
+                        <div class="binder-clips">
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                            <div class="clip"></div>
+                        </div>
+                        <h3 class="memo-title">MAYBE Maddy's type? Idk</h3>
+                        <p class="memo-text">I don't want to be narcissistic so cmiiw</p>
+                        <p class="memo-desc">
+                            Please click the button below because i wrote something every pictures here and if i place the description in the book, it's too long.
+                        </p>
+                        <p class="memo-so">One more step..</p>
+                        <button type="button" class="btn-yellow-hint" onclick="openMemoPopup()">
+                            Uhh.. press this?
+                        </button>
+                        <!-- KONTEN POP-UP KHUSUS HALAMAN 20 -->
+                        <div class="page-popup-data hidden">
+                            <h3 class="popup-custom-title">7th Monthversary Milestone</h3>
+                            <p class="popup-custom-subtitle">From the canvas of Maddy • Page 20</p>
+                            <div class="popup-custom-body">
+                                <p>The newest drawing for me..? Ehe, I'm so happy, they look so cute. And I already mentioned it, but SOPHROSYNE'S WAIST??? Bro tryna replace Aphrodite. Man, I love your arts and YOU! ♡</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-sheet sheet-landscape">
+                        <div class="photo-box-black">
+                            <img src="assets/images/1511.jpeg" alt="Memory Photo 20" onerror="this.remove()">
+                            <span class="photo-placeholder-text">for photo</span>
+                        </div>
+                        <div class="photo-notes">
+                            <h4 class="photo-title">“The Creator and The Creation”</h4>
+                            <p class="photo-story">
+                                Looks like the photos mf would post to their Instagram BAHAHAHA i love this one so muchi
+                            </p>
+                            <p class="photo-footer-text">ONE MORE STEP TO CELEBRATE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(19)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(21)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 21 (SINGLE CENTERED MEMO CARD - SESUAI GAMBAR)        -->
+            <!-- ======================================================== -->
+            <article class="page-item page-card-center hidden" id="page-21">
+                <div class="page-spread">
+                    <div class="single-memo-card">
+                        <p class="card-p-header">
+                            Those are your art pieces you sent as gifts to me for the past 6-7 months (SIXSEVENNNNN)
+                        </p>
+                        <p class="card-p-body">
+                            Those artworks are more than just digital pixels and gifts for me, you’ve been consistently made something for me especially on the 15th of every month despite you being busy. I actually feel bad of it. But anyways, I will always love your creations, all of it. Every 15th of the month, you managed to make me feel loved the most and made me the happiest person. I am really thankful for you. My apologies when I made a lot of unpleasant things happened to you. Thank you for always by my side virtually for 7 month straight. Even if I didn't tell you a lot of things happened daily, you know I still love you as yourself, as a whole. 
+                        </p>
+                        <p class="card-p-footer">
+                            Please keep up the beautiful work and oh yeah this is only the gallery of your masterpieces, press next please! C:
+                        </p>
+                    </div>
+                </div>
+
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(20)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(22)">Next &gt;</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- PAGE 22 (CELEBRATION 2D CAKE, BLOW CANDLES & SECRET LETTER) -->
+            <!-- ======================================================== -->
+            <article class="page-item page-celebration hidden" id="page-22">
+                
+                <!-- ENVELOPE NOTIFIKASI DI POJOK ATAS (MUNCUL SETELAH SEMUA LILIN PADAM) -->
+                <div id="special-letter-envelope" class="special-letter-envelope hidden" onclick="openSpecialLetter()" title="Ada surat untukmu! Klik untuk membaca">
+                    <div class="envelope-icon-2d">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-heart">💌</div>
+                    </div>
+                    <div class="notification-badge" id="letter-badge">1</div>
+                    <span class="envelope-pulse-ring"></span>
+                </div>
+
+                <!-- DEKORASI PESTA 2D (BANNER & BALON) -->
+                <div class="party-decorations" aria-hidden="true">
+                    <!-- Bunting Garland Flags Warna-warni -->
+                    <div class="party-garland">
+                        <div class="flag f1">★</div>
+                        <div class="flag f2">♥</div>
+                        <div class="flag f3">★</div>
+                        <div class="flag f4">♥</div>
+                        <div class="flag f5">★</div>
+                        <div class="flag f6">♥</div>
+                        <div class="flag f7">★</div>
+                        <div class="flag f8">♥</div>
+                        <div class="flag f9">★</div>
+                    </div>
+
+                    <!-- Balon-balon 2D di Kiri dan Kanan -->
+                    <div class="balloon-group left">
+                        <div class="balloon b-pink"></div>
+                        <div class="balloon b-yellow"></div>
+                        <div class="balloon b-blue"></div>
+                    </div>
+                    <div class="balloon-group right">
+                        <div class="balloon b-mint"></div>
+                        <div class="balloon b-purple"></div>
+                        <div class="balloon b-orange"></div>
+                    </div>
+                </div>
+
+                <!-- KONTEN UTAMA: MEJA & KUE ULANG TAHUN 2D -->
+                <div class="celebration-content">
+                    <h2 class="party-title">Happy birthday! 🎉</h2>
+                    <p class="party-instruction" id="party-hint-text">
+                        💨 <strong>Tekan dan tahan api</strong> pada setiap lilin untuk meniupnya!
+                    </p>
+
+                    <!-- AREA KUE DAN MEJA PESTA -->
+                    <div class="cake-table-stage">
+                        
+                        <!-- LILIN-LILIN DI ATAS KUE -->
+                        <div class="candles-container">
+                            <!-- Lilin 1 -->
+                            <div class="candle c1" data-candle-id="1">
+                                <div class="flame-wrap" onmousedown="startBlowing(this)" onmouseup="stopBlowing(this)" onmouseleave="stopBlowing(this)" ontouchstart="startBlowing(this)" ontouchend="stopBlowing(this)">
+                                    <div class="flame">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="smoke-puff"></div>
+                                </div>
+                                <div class="wick"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+
+                            <!-- Lilin 2 (Tengah) -->
+                            <div class="candle c2" data-candle-id="2">
+                                <div class="flame-wrap" onmousedown="startBlowing(this)" onmouseup="stopBlowing(this)" onmouseleave="stopBlowing(this)" ontouchstart="startBlowing(this)" ontouchend="stopBlowing(this)">
+                                    <div class="flame">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="smoke-puff"></div>
+                                </div>
+                                <div class="wick"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+
+                            <!-- Lilin 3 -->
+                            <div class="candle c3" data-candle-id="3">
+                                <div class="flame-wrap" onmousedown="startBlowing(this)" onmouseup="stopBlowing(this)" onmouseleave="stopBlowing(this)" ontouchstart="startBlowing(this)" ontouchend="stopBlowing(this)">
+                                    <div class="flame">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="smoke-puff"></div>
+                                </div>
+                                <div class="wick"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                        </div>
+
+                        <!-- KUE ULANG TAHUN 2D BERTINGKAT -->
+                        <div class="birthday-cake-2d">
+                            <!-- Tingkat Atas (Top Layer) -->
+                            <div class="cake-layer layer-top">
+                                <div class="cherries-row">
+                                    <span class="cherry">🍒</span>
+                                    <span class="strawberry">🍓</span>
+                                    <span class="cherry">🍒</span>
+                                </div>
+                                <div class="icing-drips top-drips"></div>
+                            </div>
+                            <!-- Tingkat Bawah (Bottom Layer) -->
+                            <div class="cake-layer layer-bottom">
+                                <div class="icing-drips bottom-drips"></div>
+                                <div class="cake-sprinkles">
+                                    <span class="sp s1"></span>
+                                    <span class="sp s2"></span>
+                                    <span class="sp s3"></span>
+                                    <span class="sp s4"></span>
+                                    <span class="sp s5"></span>
+                                    <span class="sp s6"></span>
+                                </div>
+                            </div>
+                            <!-- Piring Kue / Cake Stand -->
+                            <div class="cake-plate"></div>
+                        </div>
+
+                        <!-- MEJA PESTA DENGAN TAPLAK 2D -->
+                        <div class="party-table">
+                            <div class="tablecloth-fringe"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- NAVIGASI BAWAH -->
+                <div class="page-nav-bar">
+                    <button type="button" class="btn-nav-custom btn-prev" onclick="goToPage(21)">&lt; Previous</button>
+                    <button type="button" class="btn-nav-custom btn-next" onclick="goToPage(0)">Restart ↺</button>
+                </div>
+            </article>
+
+            <!-- ======================================================== -->
+            <!-- MODAL SURAT KHUSUS HALAMAN 22 (DARI NOTIFIKASI ENVELOPE)  -->
+            <!-- ======================================================== -->
+            <div id="special-letter-modal" class="special-letter-modal hidden" onclick="handleLetterBackdropClick(event)">
+                <div class="special-letter-card">
+                    <div class="letter-wax-seal">♡</div>
+                    <div class="letter-header">
+                        <h3 class="letter-title">Level-up Letter</h3>
+                        <p class="letter-subtitle">Made with all my heart</p>
+                    </div>
+                    <div class="letter-body custom-scrollbar">
+                        <p class="letter-greeting"><strong>Dear Cherise (or Maddy), my favorite person,</strong></p>
+                        <p>
+                            Happy birthday! Jika kamu membaca surat ini, berarti kamu sudah berhasil meniup semua lilin di atas kue tadi. Make a wish, because you deserve all the sweetest things this world has to offer!
+                        </p>
+                        <p>
+                            First of all, thank you for existing in my life. Thanks for being an amazing partner to the soul who made this website. I don't know what I'll become if I haven't meet you by now, maybe a hikikomori. You put a lot of effort for us. A thousand thank you by words wouldn't be enough. I want to express it directly, so hang on a little bit more. 
+                        </p>
+                        <p>
+                            Terima kasih banyak udah luangin waktu kamu buat aku, bahkan disaat kamu sibuk. Terima kasih udah mau rela spend energi untuk ngobrol, telpon, main game, atau bahkan ladenin curhatan aku. Terima kasih udah mengisi panel notifikasi telepon genggam aku disaat ga ada notifikasi yang masuk dari orang lain. You've successfully made me feel seen, cared, and loved. THsnk you so much.
+                        </p>
+                        <p>
+                            Semoga hari-harimu ke depan selalu dipenuhi kebahagiaan, kesehatan, dan impian-impian yang terwujud satu per satu. Semoga frekuensi sakit perut kamu berkurang e.. Soalnya kayak tersiksa gitu kamu nya 😭 I will always support you all along.
+                        </p>
+                        <p>
+                            For the things I've done wrong, I'm sorry. At many times, you made me the happiest person on earth, but I haven't made you fell that way in return. Sorry when I'm being a person with brutal inferiority complex yes.
+                        </p>
+                        <p>
+                            Anyway, enjoy your day and your tomorrows, sayang. Too bad I can't be with you at your birthday. So, Imma wish you all the best from afar. Well, at least you have 2 seals now, don't you? Well, be happy, be yourself, and itu ovt-ovt boleh but don't be too excessive bub (saying this as fellow overthinker). I wish you always meet nice people and nice things. You're the greatest thing that ever happened to me. I'll always love you.
+                        </p>
+                        <p class="letter-signature">
+                            <em>With all my endless love & gratitude,</em><br>
+                            <strong>Your Long Distance Relationship Partner ♡</strong>
+                        </p>
+                    </div>
+                    <div class="letter-footer">
+                        <button type="button" class="btn-letter-back" onclick="closeSpecialLetter()">
+                            Kembali ke Pesta 🎉
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 3. POPUP MODAL (DESKRIPSI LENGKAP & VIGNETTE) -->
+        <!-- ========================================== -->
+        <div id="memo-popup-overlay" class="memo-popup-overlay hidden" onclick="handlePopupBackdropClick(event)">
+            <div class="memo-popup-card">
+                <button type="button" class="btn-popup-close" onclick="closeMemoPopup()" aria-label="Close popup">&times;</button>
+                <div class="memo-popup-header">
+                    <div class="popup-mini-clip"></div>
+                    <h3 class="popup-title">Special Story & Notes 📖</h3>
+                    <p class="popup-subtitle">From the desk of Maddy</p>
+                </div>
+                <div class="memo-popup-body custom-scrollbar">
+                    <p class="popup-greeting"><strong>Hi there! Welcome to my scrapbook gallery.</strong></p>
+                    <p>
+                        Setiap foto dan momen di buku ini punya ceritanya masing-masing yang sangat berharga. Kadang kalau deskripsinya ditulis langsung di halaman buku, tampilannya jadi terlalu penuh dan kepanjangan!
+                    </p>
+                    <p>
+                        Makanya aku buatkan jendela pop-up catatan khusus ini, supaya aku bisa menulis cerita lengkap dan kamu bisa membacanya dengan leluasa tanpa khawatir terpotong.
+                    </p>
+                    <p>
+                        Halaman demi halaman di scrapbook ini dirancang khusus untuk menyimpan tawa, kebersamaan, dan memori tak terlupakan. Jangan lupa jelajahi setiap halaman menggunakan tombol <em>Previous</em> dan <em>Next</em> (atau pakai tombol panah kiri & kanan di keyboard kamu!).
+                    </p>
+                    <p>
+                        Semoga karya kecil ini bisa bikin kamu tersenyum hari ini. Enjoy every single bit of it, and thank you for being you! ✨♡
+                    </p>
+                </div>
+                <div class="memo-popup-footer">
+                    <button type="button" class="btn-popup-done" onclick="closeMemoPopup()">ദ്ദി(˵ •̀ ᴗ - ˵ )</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
